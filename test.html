@@ -6,7 +6,7 @@
 
 	var req = new XMLHttpRequest();
 	
-	req.open('GET', 'adressbuch.xml', true);
+	req.open('GET', 'person.xml', true);
 	req.onreadystatechange = function() 
 	{
 		if (req.readyState === 4) 
@@ -14,7 +14,7 @@
 			var doc = req.responseXML;
 			
 			// entries! vs entry!
-			var entries = doc.getElementsByTagName('eintrag');
+			var entries = doc.getElementsByTagName('person');
 			
 			
 			
@@ -25,10 +25,10 @@
 					// entry! vs entries!
 					var entry = entries[i];
 									
-					var vnEl = entry.getElementsByTagName('vorname')[0];					
-					var naEl = entry.getElementsByTagName('nachname')[0];
-					var streetEl = entry.getElementsByTagName('strasse')[0];
-					var ortEl = entry.getElementsByTagName('ort')[0];
+					var vnEl           = entry.getElementsByTagName('VORNAME')[0];					
+					var naEl           = entry.getElementsByTagName('NACHNAME')[0];
+					var personEL       = entry.getElementsByTagName('PERSON_ID')[0];
+					var obDeaktiviert  = entry.getElementsByTagName('IS_DEAKTIVIERT')[0];
 					
 					var li = document.createElement('li');
 									
@@ -41,19 +41,14 @@
 						+ 
 						'; '
 						+
-						(streetEl.textContent ? streetEl.textContent : streetEl.text) 
+						(personEL.textContent ? personEL.textContent : personEL.text) 
 						+ 
-						' '
+						'  '
 						+ 
-						streetEl.getAttribute('nr') 
+						(obDeaktiviert.textContent ? obDeaktiviert.textContent : obDeaktiviert.text)   
 						+ 
 						'; '  
-						+ 
-						ortEl.getAttribute('plz')
-						+						
-						(ortEl.textContent ? ortEl.textContent : ortEl.text) 
-						+
-						' ;'
+						
 											
 						
 					));
