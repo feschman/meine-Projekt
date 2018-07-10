@@ -1,0 +1,81 @@
+<html>
+
+<body>
+
+<script type="text/javascript">
+
+	var req = new XMLHttpRequest();
+	
+	req.open('GET', 'adressbuch.xml', true);
+	req.onreadystatechange = function() 
+	{
+		if (req.readyState === 4) 
+		{
+			var doc = req.responseXML;
+			
+			// entries! vs entry!
+			var entries = doc.getElementsByTagName('eintrag');
+			
+			
+			
+			var ul = document.createElement('ul');
+    
+				for (var i = 0, l = entries.length; i < l; i++) 
+				{
+					// entry! vs entries!
+					var entry = entries[i];
+									
+					var vnEl = entry.getElementsByTagName('vorname')[0];					
+					var naEl = entry.getElementsByTagName('nachname')[0];
+					var streetEl = entry.getElementsByTagName('strasse')[0];
+					var ortEl = entry.getElementsByTagName('ort')[0];
+					
+					var li = document.createElement('li');
+									
+					
+					li.appendChild(document.createTextNode
+					(
+						(vnEl.textContent ? vnEl.textContent : vnEl.text) 
+						+
+						(naEl.textContent ? naEl.textContent : naEl.text) 
+						+ 
+						'; '
+						+
+						(streetEl.textContent ? streetEl.textContent : streetEl.text) 
+						+ 
+						' '
+						+ 
+						streetEl.getAttribute('nr') 
+						+ 
+						'; '  
+						+ 
+						ortEl.getAttribute('plz')
+						+						
+						(ortEl.textContent ? ortEl.textContent : ortEl.text) 
+						+
+						' ;'
+											
+						
+					));
+										
+					ul.appendChild(li);
+					var li2 = document.createElement('li');
+					li2.appendChild(document.createTextNode
+					(
+						(vnEl.textContent ? vnEl.textContent : vnEl.text) 
+											
+					));
+										
+					li.appendChild(li2);
+				}
+			document.body.appendChild(ul);
+		}
+	};
+
+ req.send(null);
+
+</script> 
+
+
+</body>
+</html>

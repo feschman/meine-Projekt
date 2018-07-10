@@ -1,0 +1,36 @@
+<adressverwaltung>
+
+<eintrag id="1"> nummer eins 
+	<vorname>Max </vorname>
+	<nachname>Mustermann</nachname>
+	<strasse nr ="22"> teststr </strasse>
+	<ort plz="12345"> testort </ort>
+</eintrag>
+
+
+<eintrag id="2"> nummer zwei 
+	<vorname>Tina </vorname>
+	<nachname>Neuland</nachname>
+	<strasse nr ="88"> schillerstr </strasse>
+	<ort plz="55555"> irgendwo </ort>
+</eintrag>
+
+<eintrag id="3"> nummer drei 
+	<vorname>Amin</vorname>
+	<nachname>Gharehkhani</nachname>
+	<strasse nr ="13"> Canisiusgasse </strasse>
+	<ort plz="1090"> Wien </ort>
+</eintrag>
+<eintrag id="3"> nummer vier 
+	<vorname>Asghar</vorname>
+	<nachname>farhadi</nachname>
+	<strasse nr ="44"> Teheran/Iran </strasse>
+	<ort plz="65000"> Wien </ort>
+</eintrag>
+<eintrag id="3"> nummer fuenf 
+	<vorname>Ali</vorname>
+	<nachname>Gharehkhani</nachname>
+	<strasse nr ="55"> schweiz </strasse>
+	<ort plz="44000"> Basel </ort>
+</eintrag>
+</adressverwaltung>
