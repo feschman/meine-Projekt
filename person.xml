@@ -20,7 +20,7 @@
         <PERSON_ID>1</PERSON_ID>
         <VORNAME>Günther</VORNAME>
         <NACHNAME>Willen</NACHNAME>
-        <IS_DEAKTIVIERT>0</IS_DEAKTIVIERT>
+        <IS_DEAKTIVIERT>1</IS_DEAKTIVIERT>
     </person>
     <person>
         <PERSON_ID>2</PERSON_ID>
@@ -44,7 +44,7 @@
         <PERSON_ID>5</PERSON_ID>
         <VORNAME>Chris</VORNAME>
         <NACHNAME>Carter</NACHNAME>
-        <IS_DEAKTIVIERT>0</IS_DEAKTIVIERT>
+        <IS_DEAKTIVIERT>1</IS_DEAKTIVIERT>
     </person>
     <person>
         <PERSON_ID>6</PERSON_ID>
@@ -92,7 +92,7 @@
         <PERSON_ID>13</PERSON_ID>
         <VORNAME>Sheila</VORNAME>
         <NACHNAME>McBride</NACHNAME>
-        <IS_DEAKTIVIERT>0</IS_DEAKTIVIERT>
+        <IS_DEAKTIVIERT>1</IS_DEAKTIVIERT>
     </person>
     <person>
         <PERSON_ID>14</PERSON_ID>
@@ -194,7 +194,7 @@
         <PERSON_ID>30</PERSON_ID>
         <VORNAME>Iris</VORNAME>
         <NACHNAME>Fink</NACHNAME>
-        <IS_DEAKTIVIERT>0</IS_DEAKTIVIERT>
+        <IS_DEAKTIVIERT>1</IS_DEAKTIVIERT>
     </person>
     <person>
         <PERSON_ID>31</PERSON_ID>

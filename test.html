@@ -1,5 +1,30 @@
-<html>
-
+<!DOCTYPE html>
+<html land="de">
+<head>
+<meta charset="utf-8"/>
+<title>XML Lesen</title>
+<style type="text/css">
+.cl_0{
+  background-color:#119900;
+}
+.cl_1{
+  background-color:#ee4400;
+}
+li{
+list-style-type: none;
+}
+.wrapper{
+ margin:3px;
+ border:1px solid #001199;
+ padding:2px 1px;
+ max-width:300px;
+}
+.wrapper li{
+ color:#ffffff;
+ text-align:center
+}
+</style>
+</head>
 <body>
 
 <script type="text/javascript">
@@ -31,7 +56,7 @@
 					var obDeaktiviert  = entry.getElementsByTagName('IS_DEAKTIVIERT')[0];
 					
 					var li = document.createElement('li');
-									
+					li.className = "wrapper";				
 					
 					li.appendChild(document.createTextNode
 					(
@@ -40,27 +65,22 @@
 						(naEl.textContent ? naEl.textContent : naEl.text) 
 						+ 
 						'; '
-						+
-						(personEL.textContent ? personEL.textContent : personEL.text) 
-						+ 
-						'  '
-						+ 
-						(obDeaktiviert.textContent ? obDeaktiviert.textContent : obDeaktiviert.text)   
-						+ 
-						'; '  
+						 
 						
 											
 						
 					));
 										
 					ul.appendChild(li);
-					var li2 = document.createElement('li');
+					var li2   = document.createElement('li');
+					var Myclass = obDeaktiviert.textContent;
+					Myclass = "cl_"+Myclass;
 					li2.appendChild(document.createTextNode
 					(
-						(vnEl.textContent ? vnEl.textContent : vnEl.text) 
+						(personEL.textContent ? personEL.textContent : personEL.text) 
 											
 					));
-										
+					li2.className = Myclass;					
 					li.appendChild(li2);
 				}
 			document.body.appendChild(ul);
